@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Timetable
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h3>Timetable:</h3>
+        {% for entry in entries %}
+           <div class="alert alert-info">
+              <p><b>{{ entry.start_time }}</b></p>
+              <p>{{ entry.client_name }}: {{ entry.client_car }}</p>
+           </div>
+        {% endfor %}
+    </div>
+    <div class="container">
+        <a class="btn btn-warning" href="/create_entry">Join the queue</a>
+    </div>
+{% endblock %}

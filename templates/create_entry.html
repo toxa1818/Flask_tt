@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Entry
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h3>Fill the form below:</h3>
+        <form method="post">
+          <input type="datetime-local" name="start_time" id="start_time" class="form-control"><br>
+          <input type="text" name="client_name" id="client_name" class="form-control" placeholder="Enter your name"><br>
+          <input type="text" name="client_phone" id="client_phone" class="form-control" placeholder="Enter your phone"><br>
+          <input type="text" name="client_car" id="client_car" class="form-control" placeholder="Enter model and year of your car"><br>
+          <input type="submit" class="btn btn-success" value="Send">
+        </form>
+    </div>
+{% endblock %}
